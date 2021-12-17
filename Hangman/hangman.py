@@ -40,11 +40,40 @@ def get_available_letters(letters_guessed):
             available_letters.append(letter)
     return "".join(available_letters)
 
-def hangman(secret_word):
+#def match_with_gaps(my_word, other_word):
+#    new_word = my_word.replace(" ", "")
+#    if len(new_word) != len(other_word):
+#        return False
+#    for i in range(len(other_word)):
+#        if new_word[i] == "_":
+#            if other_word[i] in new_word:
+#                return False
+#        else:
+#            if new_word[i] != other_word[i]:
+#                return False
+#    return True
+
+#def show_possible_matches(my_word):
+#    matched_words = []
+#    for word in wordlist:
+#        if match_with_gaps(my_word, word):
+#            matched_words.append(word)
+#    if len(matched_words) == 0:
+#        print("No matches found")
+#    else:
+#        print(" ".join(matched_words))
+
+ def hangman(secret_word):
     letters_guessed = []
     guesses_remaining = 6
     warnings_remaining = 3
     vowels = "aeiou"
+
+#def hangman_with_hints(secret_word):
+#   letters_guessed = []
+#    guesses_remaining = 6
+#    warnings_remaining = 3
+#    vowels = "aeiou"
 
 
     print("Welcome to the game Hangman!")
@@ -102,3 +131,4 @@ def hangman(secret_word):
 
 secret_word = select_word(wordlist)
 hangman(secret_word)
+#hangman_with_hints(secret_word)
