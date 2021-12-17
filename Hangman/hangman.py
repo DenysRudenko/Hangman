@@ -1,17 +1,17 @@
 import random
 import string
 
-wordlist_path =  "D://Labs_python//words.txt"
+WORDLIST_FILENAME = "words.txt"
 
-def load_words(wordlist_path):
+def load_words(WORDLIST_FILENAME):
     print("Loading word list from file...")
-    inFile = open(wordlist_path, 'r')
+    inFile = open(WORDLIST_FILENAME, 'r')
     line = inFile.readline()
     wordlist = line.split()
     print(" ", len(wordlist), "words loaded.")
     return wordlist
 
-wordlist = load_words(wordlist_path)
+wordlist = load_words(WORDLIST_FILENAME)
 
 def select_word(wordlist):
     return random.choice(wordlist)
